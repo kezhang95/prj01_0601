@@ -11,5 +11,6 @@ public class C230510 {
     public static void main(String[] args) {
         Thread t1 = new Thread(()->{});
         System.out.println("thread's state is "+t1.getState());
+        System.out.println("修改了一行");
     }
 }
