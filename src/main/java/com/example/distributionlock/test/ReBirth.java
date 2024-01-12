@@ -24,6 +24,10 @@ public class ReBirth {
         List<Integer> collect = integers.stream().filter(x -> x > 2).collect(Collectors.toList());
         System.out.println("new result is"+collect);
         System.out.println("项目展开测试");
+        List<String> strings = Arrays.asList("123", "223", "333");
+        List<String> collect1 = strings.stream().filter(x -> "223".equals(x)).collect(Collectors.toList());
+        System.out.println(collect1);
+
     }
 
     private static int test(int a, int b) {
