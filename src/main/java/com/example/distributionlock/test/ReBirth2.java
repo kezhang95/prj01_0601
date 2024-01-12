@@ -10,5 +10,6 @@ package com.example.distributionlock.test;
 public class ReBirth2 {
     public static void main(String[] args) {
         System.out.println("Hello World!HaHa");
+        int a = 1;
     }
 }

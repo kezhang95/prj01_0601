@@ -20,6 +20,8 @@ public class C060605 implements Runnable{
             ExecutorService executorService = Executors.newFixedThreadPool(i);
             executorService.execute(new C060605());
         }
+        // 手动创建线程池
+
 
     }
 
