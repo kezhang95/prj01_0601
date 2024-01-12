@@ -14,13 +14,18 @@ import java.util.stream.Collectors;
  * @Description:
  */
 public class C230701 {
+    // 红球购买个数
+    private static final int COUNT1 = 6;
+    // 蓝球购买个数
+    private static final int COUNT2 = 3;
+
     public static void main(String[] args) {
         boolean flag = true;
         int programCount = 0;
         while (flag) {
-            List redResult = extracted(1, 33, "red");
-            List blueResult = extracted(1, 16, "blue");
-            if (redResult.size() < 6 || blueResult.size() < 1) {
+            List redResult = extracted(1, COUNT1 == 6 ? 35 : 33, "red");
+            List blueResult = extracted(1, COUNT1 == 6 ? 12 : 16, "blue");
+            if (redResult.size() < COUNT1 || blueResult.size() < COUNT2) {
                 programCount++;
             } else {
                 Collections.sort(redResult);
@@ -29,7 +34,7 @@ public class C230701 {
                 System.out.println("蓝球开奖结果为：" + blueResult);
                 flag = false;
             }
-            if(programCount>99){
+            if (programCount > 99) {
                 flag = false;
             }
 
@@ -44,17 +49,17 @@ public class C230701 {
         List collect = new ArrayList();
         switch (color) {
             case "red":
-                collect = getList(min, max, 6);
-                if (collect.size() < 6) {
+                collect = getList(min, max, COUNT1);
+                if (collect.size() < COUNT1) {
                     collect.clear();
-                    collect = getList(min, max, 6);
+                    collect = getList(min, max, COUNT1);
                 }
                 break;
             case "blue":
-                collect = getList(min, max, 1);
-                if (collect.size() < 1) {
+                collect = getList(min, max, COUNT2);
+                if (collect.size() < COUNT2) {
                     collect.clear();
-                    collect = getList(min, max, 1);
+                    collect = getList(min, max, COUNT2);
                 }
                 break;
             default:
