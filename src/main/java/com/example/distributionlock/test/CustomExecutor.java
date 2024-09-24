@@ -9,5 +9,5 @@ import java.util.concurrent.Executors;
  * @CreateTime: 2024/1/12 14:41
  * @Description:
  */
-public class CustomExecutor implements Executors {
+public class CustomExecutor extends RuntimeException {
 }
